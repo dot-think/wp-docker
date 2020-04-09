@@ -28,7 +28,7 @@ services:
       WORDPRESS_DB_USER: wordpress
 
     volumes:
-      - ./www/html:/var/www/html
+      - ./www/html:/var/www/html:delegated
 
 
     build:
