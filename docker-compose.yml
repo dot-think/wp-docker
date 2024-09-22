@@ -2,6 +2,7 @@ version: "3.1"
 
 services:
   mysql:
+    platform: linux/x86_64
     image: mysql:5.7
     restart: always
     volumes:
@@ -36,6 +37,7 @@ services:
       dockerfile: ./Dockerfile
 
   phpmyadmin:
+    platform: linux/x86_64
     image: phpmyadmin/phpmyadmin
     restart: always
     environment:
@@ -49,6 +51,7 @@ services:
       - 8080:80
 
   mailhog:
+    platform: linux/x86_64
     image: mailhog/mailhog
     ports:
       - 1025:1025
